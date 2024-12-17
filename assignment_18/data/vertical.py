@@ -1,4 +1,6 @@
-V_ANSWERS = "youp, claudia, herman, jochem, brigitte".split(",")
+V_ANSWERS_21 = ["youp", "claudia", "herman", "jochem", "brigitte"]
+
+V_ANSWERS = V_ANSWERS_21
 
 V_QA = {
     "Ondersteuning": "",  # steun, pijler, drager, balk
@@ -98,7 +100,7 @@ V_QA = {
     "Ingeving": "",
     "Japanse duikster": "ama",
     "Film van Pixar uit 2009": "up",
-    "Voornaam van bekende Nederlandse cabaratier": V_ANSWERS[0],
+    "Voornaam van bekende Nederlandse cabaratier": V_ANSWERS,
     "Vliegende schotel": "ufo",
     "Intelligentie quo- ti\u00ebnt": "iq",
     "Tweetallig rekenstelsel": "binair",
