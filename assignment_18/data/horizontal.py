@@ -1,7 +1,7 @@
 H_ANWERS = "stroop, pasta, drab, brij".split(",")
 
 H_QA = {
-    "Dikke vloeistof": H_ANWERS,  # stroop, pasta, drab, brij
+    "Dikke vloeistof": H_ANWERS[0],  # stroop, pasta, drab, brij
     "Diwaterstof- oxide": "water",
     "Meester in de muziek": "maestro",
     "Speeksel": "kwijl",  # kwijl, spuug

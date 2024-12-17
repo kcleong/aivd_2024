@@ -98,7 +98,7 @@ V_QA = {
     "Ingeving": "",
     "Japanse duikster": "ama",
     "Film van Pixar uit 2009": "up",
-    "Voornaam van bekende Nederlandse cabaratier": V_ANSWERS,
+    "Voornaam van bekende Nederlandse cabaratier": V_ANSWERS[0],
     "Vliegende schotel": "ufo",
     "Intelligentie quo- ti\u00ebnt": "iq",
     "Tweetallig rekenstelsel": "binair",
