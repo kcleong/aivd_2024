@@ -8,16 +8,6 @@ from data.vertical import V_QA
 N = 21
 
 
-def generator(limit, values):
-    count = 0
-    while count < limit:
-        for letter in values:
-            if count >= limit:
-                return
-            yield letter
-            count += 1
-
-
 def pad_thai(values, length, padding_char="."):
 
     top_values = list(takewhile(lambda x: x != "", values))
