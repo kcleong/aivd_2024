@@ -1,9 +1,10 @@
-V_ANSWERS_21 = ["youp", "claudia", "herman", "jochem", "brigitte"]
+V_ANSWERS_0 = ["steun", "pijler", "drager", "balk"]
+V_ANSWERS_20 = ["youp", "claudia", "herman", "jochem", "brigitte"]
 
-V_ANSWERS = V_ANSWERS_21
+V_ANSWERS = V_ANSWERS_0
 
 V_QA = {
-    "Ondersteuning": "",  # steun, pijler, drager, balk
+    "Ondersteuning": V_ANSWERS,  # steun, pijler, drager, balk
     "End-Of-Life": "",  # terminaal
     "Groene held": "",  # hulk of shrek
     "Bloem": "",
@@ -100,7 +101,8 @@ V_QA = {
     "Ingeving": "",
     "Japanse duikster": "ama",
     "Film van Pixar uit 2009": "up",
-    "Voornaam van bekende Nederlandse cabaratier": V_ANSWERS,
+    # "Voornaam van bekende Nederlandse cabaratier": V_ANSWERS,
+    "Voornaam van bekende Nederlandse cabaratier": "",
     "Vliegende schotel": "ufo",
     "Intelligentie quo- ti\u00ebnt": "iq",
     "Tweetallig rekenstelsel": "binair",
