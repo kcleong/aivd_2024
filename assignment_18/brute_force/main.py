@@ -1,4 +1,3 @@
-import heapq
 import itertools
 import json
 import time
