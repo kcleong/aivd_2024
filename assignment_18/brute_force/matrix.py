@@ -42,13 +42,13 @@ class Matrix:
         vert_matrix = numpy.array(padded_vert_values, dtype=str).reshape(self.N, self.N)
 
         # Compare the matrices directly
-        matches = numpy.sum(horiz_matrix == vert_matrix)
+        match_count = numpy.sum(horiz_matrix == vert_matrix)
 
         # Calculate success rate
         total_cells = self.N * self.N
-        success_rate = matches / total_cells
+        success_rate = match_count / total_cells
 
-        return matches, success_rate
+        return match_count, success_rate
 
     def __count_matches(self):
         """

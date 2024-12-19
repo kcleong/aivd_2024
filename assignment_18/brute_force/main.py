@@ -1,7 +1,9 @@
-import itertools
 import heapq
-from concurrent.futures import ProcessPoolExecutor
+import itertools
 import time
+from concurrent.futures import ProcessPoolExecutor
+from dataclasses import dataclass
+from typing import Tuple
 
 from data.horizontal import H_QA
 from data.vertical import V_QA
@@ -21,16 +23,14 @@ def process_combination(horiz_perm, vert_candidates):
     best_success_rate = 0
     best_vert = None
 
+    results = []
     for vert_perm in itertools.product(*vert_candidates):
         matrix = Matrix(list(horiz_perm), list(vert_perm))
-        matches, success_rate = matrix.count_matches()
+        match_count, success_rate = matrix.count_matches()
 
-        if matches > best_match_count:
-            best_match_count = matches
-            best_success_rate = success_rate
-            best_vert = vert_perm
+        results.append((match_count, success_rate, horiz_perm, vert_perm))
 
-    return best_match_count, best_success_rate, horiz_perm, best_vert
+    return results
 
 
 def batched_permutations(horiz_candidates, batch_size):
@@ -53,8 +53,8 @@ def brute_force(horiz_candidates, vert_candidates):
     start_time = time.time()
 
     # Min-heap to keep track of the top 10 matches
-    top_matches = []
     best_match_count = 0
+    top_matches = []
 
     print("=" * 80)
     print(f"\nUsing {NUM_PROCESSES} processes")
@@ -68,16 +68,16 @@ def brute_force(horiz_candidates, vert_candidates):
             ]
 
             for future in futures:
-                match_count, success_rate, horiz_perm, vert_perm = future.result()
+                for match_count, success_rate, horiz_perm, vert_perm in future.result():
+                    if match_count > best_match_count:
+                        best_match_count = match_count
 
-                # Store the result as a tuple (match_count, success_rate, horiz_perm, vert_perm)
-                result = (match_count, success_rate, horiz_perm, vert_perm)
+                        result = (match_count, success_rate, horiz_perm, vert_perm)
 
-                if match_count > best_match_count:
-                    if len(top_matches) < 10:
-                        heapq.heappush(top_matches, result)
-                    else:
-                        heapq.heappushpop(top_matches, result)
+                        if len(top_matches) < 10:
+                            heapq.heappush(top_matches, result)
+                        else:
+                            heapq.heappushpop(top_matches, result)
 
             print(f"Processed batch {i + 1}")
 
