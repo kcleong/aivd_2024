@@ -1,5 +1,5 @@
 import itertools
-import multiprocessing as mp
+from concurrent.futures import ProcessPoolExecutor
 import time
 
 from data.horizontal import H_QA
@@ -7,74 +7,45 @@ from data.vertical import V_QA
 from matrix import Matrix
 
 N = 21
-SENTINEL = None  # Special value to signal workers to stop
-NUM_PROCESSES = mp.cpu_count()
-QUEUE_SIZE = 2000
-BATCH_SIZE = 10
+NUM_PROCESSES = 10  # Adjust based on your CPU cores
+BATCH_SIZE = 10_000  # Number of permutations to process in each batch
 
 
 def format_number(number):
     return format(number, "_")
 
 
-def process_combination(horiz_perm, vert_candidates, count_counter, counter_lock):
+def process_combination(horiz_perm, vert_candidates):
     best_match_count = 0
     best_success_rate = 0
     best_vert = None
 
     for vert_perm in itertools.product(*vert_candidates):
         matrix = Matrix(list(horiz_perm), list(vert_perm))
-
-        # Increment the counter
-        with counter_lock:
-            count_counter.value += 1
-
-        if count_counter.value % 1_000_000 == 0:
-            print(f"count_matches calls: {format_number(count_counter.value)}")
-
         matches, success_rate = matrix.count_matches()
 
         if matches > best_match_count:
             best_match_count = matches
             best_success_rate = success_rate
             best_vert = vert_perm
+
     return best_match_count, best_success_rate, horiz_perm, best_vert
 
 
-def producer(horiz_candidates, task_queue):
+def batched_permutations(horiz_candidates, batch_size):
+    """Generator that yields batches of permutations."""
     horiz_permutations = itertools.product(*horiz_candidates)
+    batch = []
 
-    for horiz_perm in horiz_permutations:
-        try:
-            task_queue.put(horiz_perm, timeout=5)
-        except mp.queues.Full:
-            print("Queue is full, skipping result.")
+    for perm in horiz_permutations:
+        batch.append(perm)
+        if len(batch) >= batch_size:
+            yield batch
+            batch = []
 
-    # Signal the workers to stop by putting sentinel values
-    for _ in range(NUM_PROCESSES * 2):
-        task_queue.put(SENTINEL)
-
-
-def consumer(task_queue, vert_candidates, result_queue, count_counter, counter_lock):
-    while True:
-        try:
-            horiz_perm = task_queue.get(
-                timeout=5
-            )  # Add timeout to avoid indefinite blocking
-        except mp.queues.Empty:
-            print("Queue is empty, stopping consumer.")
-            break
-
-        if horiz_perm is SENTINEL:
-            print("BREAK")
-            break
-
-        result = process_combination(
-            horiz_perm, vert_candidates, count_counter, counter_lock
-        )
-        result_queue.put(result)
-
-    print("**QUIT**")
+    # Yield any remaining permutations
+    if batch:
+        yield batch
 
 
 def brute_force(horiz_candidates, vert_candidates):
@@ -86,66 +57,29 @@ def brute_force(horiz_candidates, vert_candidates):
     best_vert = None
 
     print("=" * 80)
-    print(f"\nProcess count: {NUM_PROCESSES}")
+    print(f"\nUsing {NUM_PROCESSES} processes")
 
-    task_queue = mp.Queue(
-        maxsize=QUEUE_SIZE
-    )  # Limit the queue size to control memory usage
-    result_queue = mp.Queue()
+    with ProcessPoolExecutor(max_workers=NUM_PROCESSES) as executor:
+        for i, batch in enumerate(batched_permutations(horiz_candidates, BATCH_SIZE)):
+            futures = [
+                executor.submit(process_combination, horiz_perm, vert_candidates)
+                for horiz_perm in batch
+            ]
 
-    # Shared counter and lock for counting calls
-    count_counter = mp.Value("i", 0)  # Shared integer counter initialized to 0
-    counter_lock = mp.Lock()  # Lock to synchronize access to the counter
+            for future in futures:
+                match_count, success_rate, horiz_perm, vert_perm = future.result()
 
-    # Start the producer process
-    producer_process = mp.Process(target=producer, args=(horiz_candidates, task_queue))
-    producer_process.start()
+                if match_count > best_match_count:
+                    best_match_count = match_count
+                    best_success_rate = success_rate
+                    best_horiz = horiz_perm
+                    best_vert = vert_perm
 
-    # Start consumer processes
-    consumers = [
-        mp.Process(
-            target=consumer,
-            args=(
-                task_queue,
-                vert_candidates,
-                result_queue,
-                count_counter,
-                counter_lock,
-            ),
-        )
-        for _ in range(NUM_PROCESSES)
-    ]
+            print(f"Processed batch {i + 1}")
 
-    for c in consumers:
-        c.start()
-
-    print("-" * 80)
-    print("Starting producer process...")
-    print("-" * 80)
-    producer_process.join()  # Wait for the producer to finish
-
-    print("-" * 80)
-    print("Starting consumer processes...")
-    print("-" * 80)
-
-    for c in consumers:
-        print(f"Joining consumer {c.name}")
-        c.join(timeout=0.1)
-        if c.is_alive():
-            c.terminate()
-
-    print(f"Total count_matches calls: {format_number(count_counter.value)}\n")
-
+    print(f"\nTotal count_matches calls: {format_number((i + 1) * BATCH_SIZE)}")
     print("Analyze results...")
     print("-" * 80)
-
-    while not result_queue.empty():
-        match_count, success_rate, horiz_perm, vert_perm = result_queue.get()
-        if match_count > best_match_count:
-            best_match_count = match_count
-            best_success_rate = success_rate
-            best_horiz = horiz_perm
-            best_vert = vert_perm
 
     # Display the best results
     print("\nBest Match Count:", best_match_count)
