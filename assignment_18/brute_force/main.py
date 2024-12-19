@@ -129,8 +129,8 @@ def brute_force(horiz_candidates, vert_candidates):
     # Convert top_matches to a JSON-compatible format
     top_matches_serializable = [
         {
-            "match_count": match_count,
-            "success_rate": success_rate,
+            "match_count": int(match_count),
+            "success_rate": int(success_rate),
             "horizontal_permutation": horiz_perm,
             "vertical_permutation": vert_perm,
         }
