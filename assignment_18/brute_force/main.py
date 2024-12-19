@@ -1,4 +1,5 @@
 import itertools
+import heapq
 from concurrent.futures import ProcessPoolExecutor
 import time
 
@@ -51,13 +52,13 @@ def batched_permutations(horiz_candidates, batch_size):
 def brute_force(horiz_candidates, vert_candidates):
     start_time = time.time()
 
+    # Min-heap to keep track of the top 10 matches
+    top_matches = []
     best_match_count = 0
-    best_success_rate = 0
-    best_horiz = None
-    best_vert = None
 
     print("=" * 80)
     print(f"\nUsing {NUM_PROCESSES} processes")
+    print(f"Batch size {format_number(BATCH_SIZE)}")
 
     with ProcessPoolExecutor(max_workers=NUM_PROCESSES) as executor:
         for i, batch in enumerate(batched_permutations(horiz_candidates, BATCH_SIZE)):
@@ -69,11 +70,14 @@ def brute_force(horiz_candidates, vert_candidates):
             for future in futures:
                 match_count, success_rate, horiz_perm, vert_perm = future.result()
 
+                # Store the result as a tuple (match_count, success_rate, horiz_perm, vert_perm)
+                result = (match_count, success_rate, horiz_perm, vert_perm)
+
                 if match_count > best_match_count:
-                    best_match_count = match_count
-                    best_success_rate = success_rate
-                    best_horiz = horiz_perm
-                    best_vert = vert_perm
+                    if len(top_matches) < 10:
+                        heapq.heappush(top_matches, result)
+                    else:
+                        heapq.heappushpop(top_matches, result)
 
             print(f"Processed batch {i + 1}")
 
@@ -81,17 +85,26 @@ def brute_force(horiz_candidates, vert_candidates):
     print("Analyze results...")
     print("-" * 80)
 
-    # Display the best results
-    print("\nBest Match Count:", best_match_count)
-    print("Best Success Rate:", best_success_rate)
-    print("\n" + "-" * 80 + "\n")
+    # Sort the top matches in descending order
+    top_matches.sort(reverse=True, key=lambda x: x[0])
+
+    # Display the top 10 results with their matrices
+    for rank, (match_count, success_rate, horiz_perm, vert_perm) in enumerate(
+        top_matches, start=1
+    ):
+        print(f"Rank {rank}:")
+        print(f"  Match Count: {match_count}")
+        print(f"  Success Rate: {success_rate:.4f}")
+        print(f"  Horizontal Permutation: {horiz_perm}")
+        print(f"  Vertical Permutation: {vert_perm}")
+
+        # Create and print the matrix for this match
+        best_matrix = Matrix(list(horiz_perm), list(vert_perm))
+        best_matrix.print()
+
+        print("=" * 80)
 
     print(f"Total Time: {time.time() - start_time}")
-
-    # Print the best matrix
-    if best_horiz and best_vert:
-        best_matrix = Matrix(list(best_horiz), list(best_vert))
-        best_matrix.print()
 
 
 if __name__ == "__main__":
