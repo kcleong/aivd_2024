@@ -4,13 +4,14 @@ import time
 from concurrent.futures import ProcessPoolExecutor
 from datetime import datetime
 
+from estimator import count_possibilities
 from data.horizontal import H_QA
 from data.vertical import V_QA
 from matrix import Matrix
 
 N = 21
-NUM_PROCESSES = 11  # Adjust based on your CPU cores
-BATCH_SIZE = 100_000  # Number of permutations to process in each batch
+NUM_PROCESSES = 10  # Adjust based on your CPU cores
+BATCH_SIZE = 10_000  # Number of permutations to process in each batch
 
 
 def format_number(number):
@@ -52,7 +53,6 @@ def brute_force(horiz_candidates, vert_candidates):
     best_match_count = 0
     top_matches = []
 
-    print("=" * 80)
     print(f"\nUsing {NUM_PROCESSES} processes")
     print(f"Batch size {format_number(BATCH_SIZE)}\n")
 
@@ -79,9 +79,9 @@ def brute_force(horiz_candidates, vert_candidates):
                         top_matches = top_matches[:10]
 
             batch_end_time = time.time()
-            batch_duration = int(batch_end_time - batch_start_time)
+            batch_duration = batch_end_time - batch_start_time
             iterations_per_second = int(
-                len(batch) / batch_duration if batch_duration > 0 else 0
+                batch_iterations / batch_duration if batch_duration > 0 else 0
             )
             total_iterations += batch_iterations
 
@@ -89,9 +89,9 @@ def brute_force(horiz_candidates, vert_candidates):
                 " / ".join(
                     [
                         f"Processed batch {i + 1}",
-                        f"{batch_duration}s",
-                        f"iterations p/s {format_number(iterations_per_second)}",
-                        format_number(batch_iterations),
+                        f"{format_number(batch_duration)}s",
+                        f"iterations p/s {int(iterations_per_second)}",
+                        format_number(total_iterations),
                     ]
                 )
             )
@@ -141,6 +141,10 @@ def brute_force(horiz_candidates, vert_candidates):
 
 
 if __name__ == "__main__":
+    print("=" * 80)
+    count_possibilities(H_QA, V_QA)
+    print("=" * 80)
+
     brute_force(
         list(H_QA.values()),
         list(V_QA.values()),

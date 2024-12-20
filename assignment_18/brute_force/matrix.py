@@ -40,9 +40,13 @@ class Matrix:
             self.N, self.N
         )
         vert_matrix = numpy.array(padded_vert_values, dtype=str).reshape(self.N, self.N)
+        vert_matrix = vert_matrix.T
+
+        # Ignore dots
+        mask = (horiz_matrix != ".") & (vert_matrix != ".")
 
         # Compare the matrices directly
-        match_count = numpy.sum(horiz_matrix == vert_matrix)
+        match_count = numpy.sum((horiz_matrix == vert_matrix) & mask)
 
         # Calculate success rate
         total_cells = self.N * self.N

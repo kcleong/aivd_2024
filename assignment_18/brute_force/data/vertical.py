@@ -19,21 +19,20 @@ V_QA = {
         "yoda",
         "link",
     ],
-    # "Bloem": [
-    #     "roos",
-    #     "tulp",
-    #     "madelief",
-    #     "zonnebloem",
-    #     "narcis",
-    # ],
-    # "Volkomen intact": [
-    #     "heel",
-    #     "ongeschonden",
-    #     "onbeschadigd",
-    # ],
+    "Bloem": [
+        "roos",
+        "tulp",
+        "narcis",
+        "madelief",
+        "zonnebloem",
+    ],
+    "Volkomen intact": [
+        "heel",
+        "ongeschonden",
+        "onbeschadigd",
+    ],
     # "Amerikaanse maffia": [
-    #     "cosa nostra",
-    #     "maffia",
+    #     "cosanostra",
     #     "mob",
     # ],
     # "Meisjesnaam": [
@@ -148,20 +147,20 @@ V_QA = {
     # "Hetgeen bewezen moest worden": [""],
     # "Kan in meerdere toestanden tegelijk verkeren": [""],
     # "Ingeving": [""],
-    # "Japanse duikster": ["ama"],
-    # "Film van Pixar uit 2009": ["up"],
-    # "Voornaam van bekende Nederlandse cabaratier": [
-    #     "youp",
-    #     "claudia",
-    #     "herman",
-    #     "jochem",
-    #     "brigitte",
-    #     "bert",
-    # ],
-    # "Vliegende schotel": ["ufo"],
-    # "Intelligentie quo- ti\u00ebnt": ["iq"],
-    # "Tweetallig rekenstelsel": ["binair"],
-    # "Korter dan \u201dDit is een heel mooi mandje gemaakt door de firma Tichelaar. Werd gebruikt op tafel als versiering en fruitmandje": [
-    #     "mand"
-    # ],
+    "Japanse duikster": ["ama"],
+    "Film van Pixar uit 2009": ["up"],
+    "Voornaam van bekende Nederlandse cabaratier": [
+        "youp",
+        "bert",
+        "herman",
+        "jochem",
+        "claudia",
+        "brigitte",
+    ],
+    "Vliegende schotel": ["ufo"],
+    "Intelligentie quo- ti\u00ebnt": ["iq"],
+    "Tweetallig rekenstelsel": ["binair"],
+    "Korter dan \u201dDit is een heel mooi mandje gemaakt door de firma Tichelaar. Werd gebruikt op tafel als versiering en fruitmandje": [
+        "mand"
+    ],
 }
