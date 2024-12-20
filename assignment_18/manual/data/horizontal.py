@@ -1,15 +1,11 @@
-H_ANWERS_0 = ["stroop", "pasta", "drab", "brij"]
-
-H_ANWERS = H_ANWERS_0
-
 H_QA = {
-    "Dikke vloeistof": H_ANWERS,  # stroop, pasta, drab, brij
+    "Dikke vloeistof": "pasta",  # stroop, pasta, drab, brij
     "Diwaterstof- oxide": "water",
-    "Meester in de muziek": "maestro",
-    "Speeksel": "kwijl",  # kwijl, spuug
+    "Meester in de muziek": "virtuoos",
+    "Speeksel": "fluim",  # kwijl, spuug
     "Middenrif": "diafragma",  # diafragma
-    "Afrikaanse hoofdstad": "",
-    "Griekse letter": "",
+    "Afrikaanse hoofdstad": "libreville",
+    "Griekse letter": "lambda",
     "Stad in Noord-Brabant": "",
     "Haarkrul": "",
     "Beknopt herhalen": "",

@@ -1,94 +1,94 @@
 H_QA = {
     "Dikke vloeistof": [
-        "stroop",
         "pasta",
-        "drab",
-        "brij",
-        "olie",
-        "brij",
-        "smurrie",
-        "gel",
-        "siroop",
-        "slijk",
+        # "stroop",
+        # "drab",
+        # "brij",
+        # "olie",
+        # "brij",
+        # "smurrie",
+        # "gel",
+        # "siroop",
+        # "slijk",
     ],
     "Diwaterstof- oxide": ["water"],
     "Meester in de muziek": [
-        "Maestro",
-        "Virtuoos",
-        "Dirigent",
-        "Componist",
-        "Kapelmeester",
-        "Musicus",
-        "Solist",
-        "Leraar",
+        "virtuoos",
+        # "Maestro",
+        # "Dirigent",
+        # "Componist",
+        # "Kapelmeester",
+        # "Musicus",
+        # "Solist",
+        # "Leraar",
     ],
     "Speeksel": [
-        "kwijl",
-        "spuug",
         "fluim",
+        # "kwijl",
+        # "spuug",
     ],
     "Middenrif": ["diafragma"],
-    "Afrikaanse hoofdstad": [
-        "Cairo",  # Egypte
-        "Tunis",  # Tunesië
-        "Rabat",  # Marokko
-        "Algiers",  # Algerije
-        "Tripoli",  # Libië
-        "Nairobi",  # Kenia
-        "Addis Ababa",  # Ethiopië
-        "Khartoum",  # Soedan
-        "Dakar",  # Senegal
-        "Bamako",  # Mali
-        "Abuja",  # Nigeria
-        "Accra",  # Ghana
-        "Luanda",  # Angola
-        "Kinshasa",  # Democratische Republiek Congo
-        "Harare",  # Zimbabwe
-        "Maputo",  # Mozambique
-        "Windhoek",  # Namibië
-        "Gaborone",  # Botswana
-        "Antananarivo",  # Madagaskar
-        "Kampala",  # Oeganda
-        "Yaoundé",  # Kameroen
-        "Bangui",  # Centraal-Afrikaanse Republiek
-        "Conakry",  # Guinee
-        "Lome",  # Togo
-        "Bissau",  # Guinee-Bissau
-        "Mogadishu",  # Somalië
-        "Asmara",  # Eritrea
-        "Malabo",  # Equatoriaal-Guinea
-        "Libreville",  # Gabon
-        "Freetown",  # Sierra Leone
-    ],
-    "Griekse letter": [
-        "alfa",
-        "beta",
-        "gamma",
-        "delta",
-        "epsilon",
-        "zeta",
-        "eta",
-        "theta",
-        "iota",
-        "kappa",
-        "lambda",
-        "mu",
-        "nu",
-        "xi",
-        "omicron",
-        "pi",
-        "rho",
-        "sigma",
-        "tau",
-        "upsilon",
-        "phi",
-        "chi",
-        "psi",
-        "omega",
-    ],
+    # "Afrikaanse hoofdstad": [
+    #     "Cairo",  # Egypte
+    #     "Tunis",  # Tunesië
+    #     "Rabat",  # Marokko
+    #     "Algiers",  # Algerije
+    #     "Tripoli",  # Libië
+    #     "Nairobi",  # Kenia
+    #     "Addis Ababa",  # Ethiopië
+    #     "Khartoum",  # Soedan
+    #     "Dakar",  # Senegal
+    #     "Bamako",  # Mali
+    #     "Abuja",  # Nigeria
+    #     "Accra",  # Ghana
+    #     "Luanda",  # Angola
+    #     "Kinshasa",  # Democratische Republiek Congo
+    #     "Harare",  # Zimbabwe
+    #     "Maputo",  # Mozambique
+    #     "Windhoek",  # Namibië
+    #     "Gaborone",  # Botswana
+    #     "Antananarivo",  # Madagaskar
+    #     "Kampala",  # Oeganda
+    #     "Yaoundé",  # Kameroen
+    #     "Bangui",  # Centraal-Afrikaanse Republiek
+    #     "Conakry",  # Guinee
+    #     "Lome",  # Togo
+    #     "Bissau",  # Guinee-Bissau
+    #     "Mogadishu",  # Somalië
+    #     "Asmara",  # Eritrea
+    #     "Malabo",  # Equatoriaal-Guinea
+    #     "Libreville",  # Gabon
+    #     "Freetown",  # Sierra Leone
+    # ],
+    # "Griekse letter": [
+    #     "alfa",
+    #     "beta",
+    #     "gamma",
+    #     "delta",
+    #     "epsilon",
+    #     "zeta",
+    #     "eta",
+    #     "theta",
+    #     "iota",
+    #     "kappa",
+    #     "lambda",
+    #     "mu",
+    #     "nu",
+    #     "xi",
+    #     "omicron",
+    #     "pi",
+    #     "rho",
+    #     "sigma",
+    #     "tau",
+    #     "upsilon",
+    #     "phi",
+    #     "chi",
+    #     "psi",
+    #     "omega",
+    # ],
     # "Stad in Noord-Brabant": [
     #     "Eindhoven",
-    #     "Den Bosch",
+    #     "DenBosch",
     #     "Tilburg",
     #     "Breda",
     #     "Helmond",
@@ -114,7 +114,7 @@ H_QA = {
     #     "Daan",
     #     "Finn",
     # ],
-    # "Kook- gerei": [
+    # "Kookgerei": [
     #     "pan",
     #     "spatel",
     #     "lepel",
@@ -134,7 +134,7 @@ H_QA = {
     #     "pluis",
     #     "veertjes",
     # ],
-    # "Gehoor- loos": [
+    # "Gehoorloos": [
     #     "doof",
     #     "slechthorend",
     # ],
@@ -144,7 +144,7 @@ H_QA = {
     #     "pong",
     #     "spaceinvaders",
     # ],
-    # "Waarnemingsinstru- ment": [
+    # "Waarnemingsinstrument": [
     #     "telescoop",
     #     "microscoop",
     #     "verrekijker",
@@ -156,7 +156,7 @@ H_QA = {
     #     "doop",
     #     "offer",
     # ],
-    # "Aanstel- ler": [""],
+    # "Aansteller": [""],
     # "Chinese vermicelli": [
     #     "mihoen",
     #     "rijstnoedels",
@@ -167,7 +167,7 @@ H_QA = {
     #     "gracht",
     #     "geul",
     # ],
-    # "De al- lereerste opera ooit gecomponeerd": [
+    # "De allereerste opera ooit gecomponeerd": [
     #     "daphne",
     #     "euridice",
     # ],
@@ -187,7 +187,7 @@ H_QA = {
     #     "echo",
     #     "geluid",
     # ],
-    # "Wa- penstrijd": [
+    # "Wapenstrijd": [
     #     "duel",
     #     "gevecht",
     #     "oorlog",
@@ -279,7 +279,7 @@ H_QA = {
     #     "bergamo",
     #     "brescia",
     # ],
-    # "Hoog- vlakte": [
+    # "Hoogvlakte": [
     #     "plateau",
     #     "vlakte",
     # ],
@@ -307,7 +307,7 @@ H_QA = {
     # "Zink": [
     #     "zn",
     # ],
-    # "Moe- der van Wilhelmina": [
+    # "Moeder van Wilhelmina": [
     #     "emma",
     # ],
     # "Strategisch bordspel": [
@@ -329,29 +329,29 @@ H_QA = {
     # "Het antwoord op deze opgave": [""],
     # "Bordspel met letters": [""],
     # "Judograad": [""],
-    # "Liberiaanse Dol-\nlar (afk)": [""],
+    # "Liberiaanse Dollar (afk)": [""],
     # "Tweevoudig": [""],
     # "Japanse judoleraar": [""],
     # "Inktvis (Japans)": [""],
     # "Smaakversterker": [""],
     # "Deel van het oog": [""],
     # "Meisjesnaam": [""],
-    # "Verbindingsproto- col": [""],
-    # "Heeft de waarde 0 of 1": [""],
-    # "Nummer (afk)": [""],
+    # "Verbindingsprotocol": [""],
+    # "Heeft de waarde 0 of 1": ["boolean"],
+    # "Nummer (afk)": ["nr"],
     # "Isolatieschuim": [""],
     # "Etter": [""],
     # "Paling": [""],
-    # "Nomen nes- cio": [""],
-    # "Eenheid van lichtsterkte": [""],
+    # "Nomen nescio": [""],
+    # "Eenheid van lichtsterkte": ["lux"],
     # "Album van Status Quo": [""],
     # "Italiaanse groet": [""],
-    # "Stad in Over- ijssel": [""],
+    # "Stad in Over-ijssel": [""],
     # "Diskjockey": [""],
     # "Waardering onroerende zaken": [""],
     # "Filmprijs": [""],
     # "Niet jong": [""],
-    # "Internatio- naal Olympisch Comit\u00e9": [""],
+    # "Internatio- naal Olympisch Comite": [""],
     # "Zoon van Wodan": [""],
     # "Full-time equivalent": [""],
     # "Halm": [""],
@@ -359,15 +359,15 @@ H_QA = {
     # "Verdorven": [""],
     # "Internettopleveldomeinnaam van een Europees land": [""],
     # "Onder (lat)": [""],
-    # "Ameri- kaanse staat": [""],
+    # "Amerikaanse staat": [""],
     # "Automerk": [""],
     # "Oud (en)": [""],
-    # "Piep- schuim": [""],
+    # "Piepschuim": [""],
     # "Europese hoofdstad": [""],
-    # "Blind zoog- dier": [""],
+    # "Blind zoogdier": [""],
     # "Westnoordwest": [""],
     # "Tennisterm": [""],
-    # "Licht- krans": [""],
+    # "Lichtkrans": [""],
     # "Augustus (afk)": [""],
     # "Land in Afrika": [""],
     # "Aas": [""],
@@ -375,12 +375,13 @@ H_QA = {
     # "Ezelsgeluid": [""],
     # "Mangaan": [""],
     # "Muzikaal teken": [""],
-    # "Rivier in Luxemburg, Bel- gi\u00eb en Duitsland": ["sauer"],
-    # "Wordt uitgedrukt in Joule": ["energie"],
-    # "Proef": [
-    #     "test",
-    #     "toets",
-    #     "geluid",
-    # ],
-    # "Kikker": ["pad"],  # pad
+    "TOP_DOWN_DIVIDER": [None],
+    "Rivier in Luxemburg, Bel- gi\u00eb en Duitsland": ["sauer"],
+    "Wordt uitgedrukt in Joule": ["energie"],
+    "Proef": [
+        "test",
+        "toets",
+        "geluid",
+    ],
+    "Kikker": ["pad"],  # pad
 }

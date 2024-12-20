@@ -10,7 +10,7 @@ from data.vertical import V_QA
 from matrix import Matrix
 
 N = 21
-NUM_PROCESSES = 10  # Adjust based on your CPU cores
+NUM_PROCESSES = 12  # Adjust based on your CPU cores
 BATCH_SIZE = 10_000  # Number of permutations to process in each batch
 
 
@@ -89,8 +89,8 @@ def brute_force(horiz_candidates, vert_candidates):
                 " / ".join(
                     [
                         f"Processed batch {i + 1}",
-                        f"{format_number(batch_duration)}s",
-                        f"iterations p/s {int(iterations_per_second)}",
+                        f"{int(batch_duration)}s",
+                        f"iterations p/s {format_number(int(iterations_per_second))}",
                         format_number(total_iterations),
                     ]
                 )

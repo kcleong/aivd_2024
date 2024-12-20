@@ -2,8 +2,8 @@ from itertools import takewhile, dropwhile
 
 import numpy as np
 
-from data.horizontal import H_QA, H_ANWERS
-from data.vertical import V_QA, V_ANSWERS
+from data.horizontal import H_QA
+from data.vertical import V_QA
 
 N = 21
 
@@ -51,14 +51,4 @@ def pick_value(values, index):
 
 
 if __name__ == "__main__":
-
-    for h_index in range(len(H_ANWERS)):
-        for v_index in range(len(V_ANSWERS)):
-            line = "-" * 60
-            print()
-            print(f"{line} {h_index} / {v_index} {line}")
-            print()
-            h_qa_values = list(pick_value(H_QA.values(), h_index))
-            v_qa_values = list(pick_value(V_QA.values(), v_index))
-
-            main(h_qa_values, v_qa_values)
+    main(H_QA.values(), V_QA.values())

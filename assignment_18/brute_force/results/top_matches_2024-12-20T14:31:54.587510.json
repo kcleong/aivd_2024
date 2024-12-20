@@ -1,0 +1,164 @@
+[
+    {
+        "match_count": 7,
+        "success_rate": 0,
+        "horizontal_permutation": [
+            "pasta",
+            "water",
+            "Virtuoos",
+            "fluim",
+            "diafragma",
+            "Libreville",
+            "lambda"
+        ],
+        "vertical_permutation": [
+            "pilaar",
+            "eol",
+            "hulk",
+            "roos",
+            "heel",
+            "ama",
+            "up",
+            "claudia",
+            "ufo",
+            "iq",
+            "binair",
+            "mand"
+        ]
+    },
+    {
+        "match_count": 6,
+        "success_rate": 0,
+        "horizontal_permutation": [
+            "pasta",
+            "water",
+            "Maestro",
+            "kwijl",
+            "diafragma",
+            "Antananarivo",
+            "epsilon"
+        ],
+        "vertical_permutation": [
+            "pijler",
+            "terminaal",
+            "shrek",
+            "madelief",
+            "ongeschonden",
+            "ama",
+            "up",
+            "claudia",
+            "ufo",
+            "iq",
+            "binair",
+            "mand"
+        ]
+    },
+    {
+        "match_count": 5,
+        "success_rate": 0,
+        "horizontal_permutation": [
+            "stroop",
+            "water",
+            "Maestro",
+            "kwijl",
+            "diafragma",
+            "Khartoum",
+            "theta"
+        ],
+        "vertical_permutation": [
+            "steun",
+            "eol",
+            "shrek",
+            "narcis",
+            "heel",
+            "ama",
+            "up",
+            "youp",
+            "ufo",
+            "iq",
+            "binair",
+            "mand"
+        ]
+    },
+    {
+        "match_count": 4,
+        "success_rate": 0,
+        "horizontal_permutation": [
+            "stroop",
+            "water",
+            "Maestro",
+            "kwijl",
+            "diafragma",
+            "Algiers",
+            "gamma"
+        ],
+        "vertical_permutation": [
+            "steun",
+            "eol",
+            "shrek",
+            "narcis",
+            "heel",
+            "ama",
+            "up",
+            "youp",
+            "ufo",
+            "iq",
+            "binair",
+            "mand"
+        ]
+    },
+    {
+        "match_count": 3,
+        "success_rate": 0,
+        "horizontal_permutation": [
+            "stroop",
+            "water",
+            "Maestro",
+            "kwijl",
+            "diafragma",
+            "Cairo",
+            "alfa"
+        ],
+        "vertical_permutation": [
+            "steun",
+            "eol",
+            "shrek",
+            "narcis",
+            "heel",
+            "ama",
+            "up",
+            "youp",
+            "ufo",
+            "iq",
+            "binair",
+            "mand"
+        ]
+    },
+    {
+        "match_count": 2,
+        "success_rate": 0,
+        "horizontal_permutation": [
+            "stroop",
+            "water",
+            "Maestro",
+            "kwijl",
+            "diafragma",
+            "Cairo",
+            "alfa"
+        ],
+        "vertical_permutation": [
+            "steun",
+            "eol",
+            "hulk",
+            "roos",
+            "heel",
+            "ama",
+            "up",
+            "youp",
+            "ufo",
+            "iq",
+            "binair",
+            "mand"
+        ]
+    }
+]

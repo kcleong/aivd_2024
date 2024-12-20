@@ -1,10 +1,5 @@
-V_ANSWERS_0 = ["steun", "pijler", "drager", "balk"]
-V_ANSWERS_20 = ["youp", "claudia", "herman", "jochem", "brigitte"]
-
-V_ANSWERS = V_ANSWERS_0
-
 V_QA = {
-    "Ondersteuning": V_ANSWERS,  # steun, pijler, drager, balk
+    "Ondersteuning": "pilaar",  # steun, pijler, drager, balk
     "End-Of-Life": "",  # terminaal
     "Groene held": "",  # hulk of shrek
     "Bloem": "",
