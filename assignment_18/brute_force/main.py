@@ -10,7 +10,7 @@ from data.vertical import V_QA
 from matrix import Matrix
 
 N = 21
-NUM_PROCESSES = 12  # Adjust based on your CPU cores
+NUM_PROCESSES = 10  # Adjust based on your CPU cores
 BATCH_SIZE = 10_000  # Number of permutations to process in each batch
 
 
@@ -145,7 +145,4 @@ if __name__ == "__main__":
     count_possibilities(H_QA, V_QA)
     print("=" * 80)
 
-    brute_force(
-        list(H_QA.values()),
-        list(V_QA.values()),
-    )
+    brute_force(list(H_QA.values()), list(V_QA.values()))
