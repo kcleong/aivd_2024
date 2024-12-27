@@ -12,6 +12,7 @@ from matrix import Matrix
 N = 21
 NUM_PROCESSES = 10  # Adjust based on your CPU cores
 BATCH_SIZE = 10_000  # Number of permutations to process in each batch
+TOP_MATCHES_COUNT = 3
 
 
 def format_number(number):
@@ -76,7 +77,7 @@ def brute_force(horiz_candidates, vert_candidates):
                         result = (match_count, success_rate, horiz_perm, vert_perm)
 
                         top_matches.insert(0, result)
-                        top_matches = top_matches[:10]
+                        top_matches = top_matches[:TOP_MATCHES_COUNT]
 
             batch_end_time = time.time()
             batch_duration = batch_end_time - batch_start_time
@@ -102,11 +103,13 @@ def brute_force(horiz_candidates, vert_candidates):
 
     # Sort the top matches in descending order
     top_matches.sort(reverse=True, key=lambda x: x[0])
-
+    top_matches.reverse()
+    top_matches_count = len(top_matches)
     # Display the top 10 results with their matrices
-    for rank, (match_count, success_rate, horiz_perm, vert_perm) in enumerate(
-        top_matches, start=1
-    ):
+    for match_count, success_rate, horiz_perm, vert_perm in top_matches:
+        rank = top_matches_count
+        top_matches_count -= 1
+
         print(f"Rank {rank}:")
         print(f"  Match Count: {match_count}")
         print(f"  Success Rate: {success_rate:.4f}")

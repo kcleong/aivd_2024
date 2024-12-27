@@ -22,111 +22,124 @@ H_QA = {
     ],
     "Speeksel": [
         "fluim",
-        "saliva",
+        # "saliva",
         # "kwijl",
+        # "zever",
         # "spuug",
     ],
-    "Middenrif": ["diafragma"],
-    # "Afrikaanse hoofdstad": [
-    #     "Cairo",  # Egypte
-    #     "Tunis",  # Tunesië
-    #     "Rabat",  # Marokko
-    #     "Algiers",  # Algerije
-    #     "Tripoli",  # Libië
-    #     "Nairobi",  # Kenia
-    #     "AddisAbaba",  # Ethiopië
-    #     "Khartoum",  # Soedan
-    #     "Dakar",  # Senegal
-    #     "Bamako",  # Mali
-    #     "Abuja",  # Nigeria
-    #     "Accra",  # Ghana
-    #     "Luanda",  # Angola
-    #     "Kinshasa",  # Democratische Republiek Congo
-    #     "Harare",  # Zimbabwe
-    #     "Maputo",  # Mozambique
-    #     "Windhoek",  # Namibië
-    #     "Gaborone",  # Botswana
-    #     "Antananarivo",  # Madagaskar
-    #     "Kampala",  # Oeganda
-    #     "Yaounde",  # Kameroen
-    #     "Bangui",  # Centraal-Afrikaanse Republiek
-    #     "Conakry",  # Guinee
-    #     "Lome",  # Togo
-    #     "Bissau",  # Guinee-Bissau
-    #     "Mogadishu",  # Somalië
-    #     "Asmara",  # Eritrea
-    #     "Malabo",  # Equatoriaal-Guinea
-    #     "Libreville",  # Gabon
-    #     "Freetown",  # Sierra Leone
-    # ],
-    # "Griekse letter": [
-    #     "alfa",
-    #     "beta",
-    #     "gamma",
-    #     "delta",
-    #     "epsilon",
-    #     "zeta",
-    #     "eta",
-    #     "theta",
-    #     "iota",
-    #     "kappa",
-    #     "lambda",
-    #     "mu",
-    #     "nu",
-    #     "xi",
-    #     "omicron",
-    #     "pi",
-    #     "rho",
-    #     "sigma",
-    #     "tau",
-    #     "upsilon",
-    #     "phi",
-    #     "chi",
-    #     "psi",
-    #     "omega",
-    # ],
-    # "Stad in Noord-Brabant": [
-    #     "Eindhoven",
-    #     "DenBosch",
-    #     "Tilburg",
-    #     "Breda",
-    #     "Helmond",
-    #     "Oss",
-    #     "BergenopZoom",
-    #     "waalwijk",
-    #     "Veghel",
-    #     "uden",
-    # ],
-    # "Haarkrul": ["lok"],
-    # "Beknopt herhalen": [
-    #     "samenvatten",
-    #     "resumeren",
-    #     "herhalen",
-    #     "recapituleren",
-    # ],
-    # "Jongensnaam": [
-    #     "Jan",
-    #     "Piet",
-    #     "Kees",
-    #     "Tom",
-    #     "Luuk",
-    #     "Daan",
-    #     "Finn",
-    # ],
-    # "Kookgerei": [
-    #     "pan",
-    #     "spatel",
-    #     "lepel",
-    #     "mixer",
-    #     "vergiet",
-    #     "snijplank",
-    # ],
-    # "Halteplaats": [
-    #     "station",
-    #     "bushalte",
-    #     "tramhalte",
-    #     "perron",
-    # ],
+    "Middenrif": [
+        # "diafragma",
+        "tussenschot",
+    ],
+    "Afrikaanse hoofdstad": [
+        # "Cairo",  # Egypte
+        # "Tunis",  # Tunesië
+        # "Rabat",  # Marokko
+        # "Algiers",  # Algerije
+        # "Tripoli",  # Libië
+        # "Nairobi",  # Kenia
+        # "AddisAbaba",  # Ethiopië
+        # "Khartoum",  # Soedan
+        # "Dakar",  # Senegal
+        # "Bamako",  # Mali
+        # "Abuja",  # Nigeria
+        # "Accra",  # Ghana
+        # "Luanda",  # Angola
+        # "Kinshasa",  # Democratische Republiek Congo
+        # "Harare",  # Zimbabwe
+        # "Maputo",  # Mozambique
+        # "Windhoek",  # Namibië
+        # "Gaborone",  # Botswana
+        # "Antananarivo",  # Madagaskar
+        # "Kampala",  # Oeganda
+        # "Yaounde",  # Kameroen
+        # "Bangui",  # Centraal-Afrikaanse Republiek
+        # "Conakry",  # Guinee
+        # "Lome",  # Togo
+        # "Bissau",  # Guinee-Bissau
+        # "Mogadishu",  # Somalië
+        # "Asmara",  # Eritrea
+        # "Malabo",  # Equatoriaal-Guinea
+        "Libreville",  # Gabon
+        # "Freetown",  # Sierra Leone
+    ],
+    "Griekse letter": [
+        "alfa",
+        "beta",
+        "gamma",
+        "delta",
+        "epsilon",
+        "zeta",
+        "eta",
+        "theta",
+        "iota",
+        "kappa",
+        "lambda",
+        "mu",
+        "nu",
+        "xi",
+        "omicron",
+        "pi",
+        "rho",
+        "sigma",
+        "tau",
+        "upsilon",
+        "phi",
+        "chi",
+        "psi",
+        "omega",
+    ],
+    "Stad in Noord-Brabant": [
+        "Eindhoven",
+        "DenBosch",
+        "Tilburg",
+        "Breda",
+        "Helmond",
+        "Oss",
+        "BergenopZoom",
+        "waalwijk",
+        "Veghel",
+        "uden",
+    ],
+    "Haarkrul": ["lok"],
+    "Beknopt herhalen": [
+        "samenvatten",
+        "resumeren",
+        "herhalen",
+        "recapituleren",
+    ],
+    "Jongensnaam": [
+        "xx",
+        "xxx",
+        "xxxx",
+        "xxxxx",
+        "xxxxxx",
+        "xxxxxxx",
+        "xxxxxxxx",
+        "xxxxxxxxx",
+        "xxxxxxxxxx",
+        # "Jan",
+        # "Piet",
+        # "Kees",
+        # "Tom",
+        # "Luuk",
+        # "Daan",
+        # "Finn",
+    ],
+    "Kookgerei": [
+        "pan",
+        "spatel",
+        "lepel",
+        "mixer",
+        "vergiet",
+        "snijplank",
+    ],
+    "Halteplaats": [
+        "station",
+        "bushalte",
+        "tramhalte",
+        "perron",
+    ],
     # "Grote variant van lego": ["Duplo"],
     # "De zachtste veren van een vogel": [
     #     "dons",
@@ -433,45 +446,48 @@ H_QA = {
     #     "kadaver",
     #     "prooi",
     # ],
-    "Vlinderlarve": [
-        "rups",
-    ],
-    "Ezelsgeluid": [
-        "ia",
-        "balk",
-        "balken",
-    ],
-    "Mangaan": [
-        "mn",
-        "metaal",
-    ],
-    "Muzikaal teken": [
-        "crescendo",
-        "decrescendo",
-        # "mol",
-        # "noot",
-        # "rust",
-        # "dubbelkruis",
-        # "Dubbelmol",
-        # "kruis",
-        # "sleutel",
-        # "Herstellingsteken",
-        # "Allabreve",
-        # "Fortissimo",
-        # "Forte",
-        # "piano",
-        # "pianissimo",
-    ],
-    "Rivier in Luxemburg, Belgie en Duitsland": [
-        # "sauer",
-        "sure",
-        # "our",
-    ],
-    "Wordt uitgedrukt in Joule": ["energie"],
-    "Proef": [
-        # "test",
-        "toets",
-        # "examen",
-    ],
-    "Kikker": ["pad"],  # pad
+    # "Vlinderlarve": [
+    #     "rups",
+    # ],
+    # "Ezelsgeluid": [
+    #     "ia",
+    #     "balk",
+    #     "balken",
+    # ],
+    # "Mangaan": [
+    #     "mn",
+    #     "metaal",
+    # ],
+    # ---
+    # "Muzikaal teken": [
+    #     # "mol",
+    #     # "noot",
+    #     # "kruis",
+    #     # "sleutel",
+    #     "crescendo",
+    #     # "decrescendo",
+    #     # "accent",
+    #     # "boog",
+    #     # "rust",
+    #     # "dubbelkruis",
+    #     # "Dubbelmol",
+    #     # "Herstellingsteken",
+    #     # "Allabreve",
+    #     # "Fortissimo",
+    #     # "Forte",
+    #     # "piano",
+    #     # "pianissimo",
+    # ],
+    # "Rivier in Luxemburg, Belgie en Duitsland": [
+    #     # "sauer",
+    #     "sure",
+    #     # "our",
+    # ],
+    # "Wordt uitgedrukt in Joule": ["energie"],
+    # "Proef": [
+    #     # "test",
+    #     "toets",
+    #     # "examen",
+    # ],
+    # "Kikker": ["pad"],  # pad
 }
